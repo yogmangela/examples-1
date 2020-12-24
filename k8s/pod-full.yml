@@ -7,7 +7,7 @@ spec:
   - name: "yogs-data"
     # This AWS EBS volume must already exist.
     awsElasticBlockStore:
-      volumeID: "vol-035d3a48cd66bbcce"
+      volumeID: "vol-04ca6253de279b5da"
       fsType: ext4
   containers:
   - image: gcr.io/kuar-demo/kuard-amd64:1
