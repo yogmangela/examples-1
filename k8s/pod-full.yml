@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: yogs-data
+  name: "yogs-data"
 spec:
   volumes:
-  - name: test-volume
+  - name: "yogs-data"
     # This AWS EBS volume must already exist.
     awsElasticBlockStore:
       volumeID: "vol-035d3a48cd66bbcce"
@@ -24,8 +24,8 @@ spec:
         cpu: "1000m"
         memory: "256Mi"
     volumeMounts:
-    - mountPath: /data
-      name: yogs-data
+    - mountPath: "/data"
+      name: "yogs-data"
     livenessProbe:
         httpGet:
           path: /healthy
